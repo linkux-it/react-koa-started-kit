@@ -7,6 +7,8 @@ using many tools to improve productivity.
 This assume you are using iojs for developing backend
 and ecmascript 2015
 
+Templates should be modified when start production, searching the best way do to it
+
 Frameworks to use:
 ------------------
 
@@ -25,6 +27,10 @@ Tools:
 
 3. ESLint.- Config to set the configs files to allow us do
    better code that depends on side we are coding.
+
+4.- Live reload
+5.- nodemon
+6.- sass, compasss
 
 Directories
 -----------

@@ -19,14 +19,11 @@ Frameworks to use:
 Tools:
 ------
 
-1. Gulp.- Will be used to add some automatic tasks like
-   transpile on frontend code, minify, uglify for production.
+1. Gulp.- Will be used to add some automatic tasks like transpile on frontend code, minify, uglify for production.
 
-2. Editorconfig.- Just create the config file to help some conventions
-   that the team should handle it.
+2. Editorconfig.- Just create the config file to help some conventions that the team should handle it.
 
-3. ESLint.- Config to set the configs files to allow us do
-   better code that depends on side we are coding.
+3. ESLint.- Config to set the configs files to allow us do better code that depends on side we are coding.
 
 4.- Live reload
 
@@ -37,8 +34,5 @@ Tools:
 Directories
 -----------
 
-* frontend *
-  should store css, scss, and any other frontend source file
-  and gulp will its work and put on * public *. The other directories are
-  the normal ones for common layout.
+* frontend.- should store css, scss, and any other frontend source file and gulp will its work and put on * public *. The other directories are the normal ones for common layout.
 

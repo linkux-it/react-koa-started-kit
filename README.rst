@@ -25,11 +25,11 @@ Tools:
 
 3. ESLint.- Config to set the configs files to allow us do better code that depends on side we are coding.
 
-4.- Live reload
+4. Live reload
 
-5.- nodemon
+5. nodemon
 
-6.- sass, compasss
+6. sass, compasss
 
 Directories
 -----------

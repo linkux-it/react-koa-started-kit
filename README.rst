@@ -29,13 +29,16 @@ Tools:
    better code that depends on side we are coding.
 
 4.- Live reload
+
 5.- nodemon
+
 6.- sass, compasss
 
 Directories
 -----------
 
-* frontend * should store css, scss, and any other frontend source file
+* frontend *
+  should store css, scss, and any other frontend source file
   and gulp will its work and put on * public *. The other directories are
   the normal ones for common layout.
 

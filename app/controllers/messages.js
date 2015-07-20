@@ -1,6 +1,13 @@
 'use strict';
-var views = require('co-views');
-var parse = require('co-body');
+import React from 'react'
+import views from 'co-views'
+import parse from 'co-body'
+
+import {HelloMessage} from 'components/hello-world.jsx'
+
+// Put ready for server side
+let ServerHelloMessage = React.createFactory(HelloMessage);
+
 var messages = [
   { id: 0, message: 'Koa next generation web framework for node.js' },
   { id: 1, message: 'Koa is a new web framework designed by the team behind Express' }
@@ -9,6 +16,14 @@ var messages = [
 var render = views(__dirname + '/../views', {
   map: { html: 'swig' }
 });
+
+module.exports.reactExample = function *reactExample() {
+  this.body = yield render('layout', { 'reactHTML': React.renderToString(ServerHelloMessage({name: "John"})) });
+};
+
+module.exports.home = function *home() {
+  this.body = yield render('list', { 'messages': messages });
+};
 
 module.exports.home = function *home() {
   this.body = yield render('list', { 'messages': messages });

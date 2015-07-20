@@ -1,6 +1,8 @@
 Base project layout for ReactJS, KoaJS
 ======================================
 
+You can use the #[airbnb style guide](https://github.com/airbnb/javascript)
+
 This base templates will try to handle the base structure
 using many tools to improve productivity.
 
@@ -31,8 +33,20 @@ Tools:
 
 6. sass, compasss
 
+7. Babel to use es6
+
+8. Precommit done
+
 Directories
 -----------
 
 * frontend.- should store css, scss, and any other frontend source file and gulp will its work and put on * public *. The other directories are the normal ones for common layout.
+* fronend/scripts has react code
+* app.- has all server side code
+* lib.- is for any app, library or anything else
 
+Some Points
+-----------
+
+* indes.jsx  file imports are relative imports
+* all server side are normal import as it is libraries

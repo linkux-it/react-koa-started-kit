@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "NODE_PATH=app:lib:frontend/scripts iojs app.js",
+    "start": "NODE_PATH=app:lib iojs app.js",
     "test": "iojs node_modules/mocha/bin/_mocha"
   },
   "dependencies": {

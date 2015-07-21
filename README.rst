@@ -41,7 +41,7 @@ Directories
 -----------
 
 * frontend.- should store css, scss, and any other frontend source file and gulp will its work and put on * public *. The other directories are the normal ones for common layout.
-* fronend/scripts has react code
+* frontend/scripts has react code
 * app.- has all server side code
 * lib.- is for any app, library or anything else
 

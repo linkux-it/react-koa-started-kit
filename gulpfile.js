@@ -11,10 +11,10 @@ var livereload = require('gulp-livereload');
 var plumber = require('gulp-plumber');
 
 
-gulp.task('scripts', function() {
+gulp.task('javascript', function() {
   // build frontend files
   browserify({
-    entries: 'frontend/scripts/index.jsx',
+    entries: 'frontend/javascript/index.jsx',
     extensions: ['.jsx'],
     debug: true
   })
@@ -22,11 +22,11 @@ gulp.task('scripts', function() {
   .bundle()
   .pipe(source('app.js'))
   .pipe(streamify(uglify()))
-  .pipe(gulp.dest('public/scripts'))
+  .pipe(gulp.dest('public/javascript'))
   .pipe(livereload());
 });
 
-gulp.task('styles', function() {
+gulp.task('sass', function() {
   // sass and compass
   gulp.src('frontend/scss/**/*.scss')
     .pipe(plumber())
@@ -46,8 +46,8 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./frontend/scss/*.scss', ['styles']);
-  gulp.watch('./frontend/javascript/**/*.jsx', ['scripts']);
+  gulp.watch('./frontend/scss/*.scss', ['sass']);
+  gulp.watch(['./frontend/javascript/index.jsx', './app/components/**/*.jsx'], ['scripts']);
 });
 
 gulp.task('develop', function () {
@@ -56,7 +56,7 @@ gulp.task('develop', function () {
           , ext: 'html swig jsx js'
           , ignore: ['ignored.js']
           , watch: ['config', 'app', 'app.js', 'lib']
-          , env: {NODE_PATH: 'app:lib:frontend/scripts'}
+          , env: {NODE_PATH: 'app:lib'}
           , tasks: ['lint'] })
   .on('restart', function () {
     setTimeout(function () {
@@ -66,4 +66,4 @@ gulp.task('develop', function () {
   });
 });
 
-gulp.task('default', ['styles', 'scripts', 'develop', 'watch']);
+gulp.task('default', ['sass', 'javascript', 'develop', 'watch']);

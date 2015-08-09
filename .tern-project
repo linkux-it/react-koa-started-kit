@@ -1,0 +1,15 @@
+{
+  "libs": [
+    "chai",
+    "browser",
+    "ecma5",
+    "ecma6",
+    "underscore",
+  ],
+  "loadEagerly": [
+    "importantfile.js"
+  ],
+  "plugins": {
+    "node": {}
+  }
+}

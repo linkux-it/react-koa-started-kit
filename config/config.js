@@ -10,19 +10,16 @@
  */
 'use strict';
 
-try {
-  require('dotenv').load();
-} catch (e) {
-  /* handle error */
-}
+require('dotenv').load();
 
-let path = require("path");
 
-let nconf = require('nconf');
+import path from 'path';
+import nconf from 'nconf';
+
 
 // Start default variables
 let defaults = {
-  ROOT_DIR: path.normalize(__dirname + '/..')
+  ROOT_DIR: path.normalize(path.join(__dirname, '/..'))
 };
 
 
@@ -34,3 +31,4 @@ let defaults = {
 nconf.argv().env();
 
 nconf.defaults(defaults);
+

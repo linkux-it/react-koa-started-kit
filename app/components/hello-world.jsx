@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-var HelloMessage = React.createClass({
-  handleClick: function () {
-    alert('You clicked!')
-  },
 
-  render: function() {
-    return <div onClick={this.handleClick}>Hello {this.props.name}</div>
+export class HelloMessage extends React.Component {
+
+  handleClick () {
+    alert('You clicked!');
   }
-});
 
-module.exports.HelloMessage = HelloMessage;
+  render () {
+    return <div onClick={this.handleClick}>Hello {this.props.name}</div>;
+  }
+
+}

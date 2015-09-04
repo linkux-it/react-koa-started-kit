@@ -1,4 +1,12 @@
 {
+    "parser": "babel-eslint",
+    "settings": {
+        "ecmascript": 6,
+        "jsx": true
+    },
+    "plugins": [
+        "react"
+    ],
     "ecmaFeatures": {
         "blockBindings": true,
         "forOf": true,
@@ -10,12 +18,14 @@
         "defaultParams": true,
         "modules": true,
         "binaryLiterals": true,
-        "binaryLiterals": true,
-        ""
+        "binaryLiterals": true
     },
     "rules": {
-        "semi": 2,
-        "quotes": [0, "disable"]
+        "strict": 0,
+        "quotes": 0,
+        "no-unused-vars": 0,
+        "camelcase": 0,
+        "no-underscore-dangle": 0
     },
     "env": {
         "browser": true,

@@ -1,3 +1,7 @@
+/**
+ * TODO: This is just for testing... Remove it whend needs
+ *
+ */
 'use strict';
 import React from 'react'
 import views from 'co-views'

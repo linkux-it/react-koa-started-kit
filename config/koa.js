@@ -4,14 +4,14 @@
  */
 'use strict';
 
-let compress = require('koa-compress');
-let logger = require('koa-logger');
-let serve = require('koa-static');
-let nconf = require('nconf');
-let path = require('path');
+import compress from 'koa-compress';
+import logger from 'koa-logger';
+import serve from 'koa-static';
+import nconf from 'nconf';
+import path from 'path';
 
 
-module.exports = function (app) {
+export default function configureKoa (app) {
   // Logger
   app.use(logger());
 
